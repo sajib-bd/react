@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+* {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.login {
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.login-card {
+  @apply border rounded-3xl py-4 px-6 backdrop-blur-sm shadow-xl flex flex-col 
+  justify-center items-center gap-3 relative max-smMobile:hidden 
+  smMobile:h-[450px] smMobile:w-full mobile:h-[500px] mobile:w-[400px]
+  lgMobile:h-[500px] lgMobile:w-[450px];
+}
+
+.btn {
+  @apply border px-16 py-2 backdrop-blur-md rounded-full 
+  text-xl text-white hover-btn overflow-hidden relative;
+}
+
+.input {
+  @apply border rounded-full py-2 px-4 w-full text-green-500;
+}
+
+.hover-btn::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: rgb(11, 241, 99);
+  transition: width 0.5s ease;
+}
+
+.hover-btn:hover::after {
+  width: 100%;
+}
